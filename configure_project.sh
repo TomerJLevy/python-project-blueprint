@@ -24,6 +24,7 @@ sed -i s/$DUMMY_MODULE/$MODULE/g dev.Dockerfile
 sed -i s/$DUMMY_MODULE/$MODULE/g prod.Dockerfile
 sed -i s/$DUMMY_MODULE/$MODULE/g tests/context.py
 sed -i s/$DUMMY_MODULE/$MODULE/g tests/test_app.py
+sed -i s/${DUMMY_MODULE^}/${MODULE^}/g blueprint/app.py
 mv $DUMMY_MODULE $MODULE
 
 sed -i s/$DUMMY_MODULE/$MODULE/g pytest.ini
